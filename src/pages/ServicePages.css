@@ -1,0 +1,102 @@
+/* Service Pages (Residential, etc.) - Premium Light Theme */
+.service-intro {
+    padding-top: 0;
+    margin-bottom: 2rem;
+}
+
+.intro-content {
+    padding: 3.5rem;
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    /* Add radius if missing in base */
+    transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .intro-content {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.intro-content h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+[data-theme='dark'] .intro-content h2 {
+    color: var(--text-primary);
+}
+
+.intro-content p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.feature-tag {
+    padding: 0.6rem 1.5rem;
+    background: white;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: var(--radius-xl);
+    color: var(--secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.05);
+    transition: all var(--transition-fast);
+}
+
+[data-theme='dark'] .feature-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+[data-theme='dark'] .feature-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--secondary);
+}
+
+.feature-tag:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.1);
+}
+
+.projects-listing {
+    background: var(--bg-primary);
+}
+
+.projects-listing h2 {
+    margin-bottom: 3rem;
+}
+
+.projects-listing .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        padding: 2rem;
+    }
+
+    .intro-content p {
+        font-size: 1rem;
+    }
+
+    .projects-listing .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

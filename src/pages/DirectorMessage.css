@@ -1,0 +1,140 @@
+/* Director Message - Premium Light Theme */
+.director-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.director-image-wrapper {
+    position: sticky;
+    top: 120px;
+    padding: 1rem;
+    background: var(--bg-primary);
+    /* Theme aware */
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .director-image-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.director-image {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-md);
+}
+
+.director-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.director-image:hover img {
+    transform: scale(1.05);
+}
+
+.director-info {
+    text-align: center;
+}
+
+.director-info h3 {
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.director-info p {
+    color: var(--secondary);
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.message-content {
+    padding: 4rem;
+    background: var(--bg-primary);
+    /* Theme aware */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .message-content {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quote-icon {
+    color: var(--secondary);
+    opacity: 0.2;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.message-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.message-text p:first-of-type {
+    font-weight: 500;
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.signature {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--bg-secondary);
+}
+
+.sign-name {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-style: italic;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.sign-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .director-content {
+        grid-template-columns: 1fr;
+    }
+
+    .director-image-wrapper {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .message-content {
+        padding: 2rem;
+    }
+
+    .message-text p {
+        font-size: 1rem;
+    }
+}
